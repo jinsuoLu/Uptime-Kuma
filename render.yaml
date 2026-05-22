@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: uptime-kuma
+    env: node
+    plan: starter
+    region: singapore
+    buildCommand: npm ci --omit=dev && npm run build
+    startCommand: node server/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: UPTIME_KUMA_WS_ORIGIN_CHECK
+        value: cors-like
+    healthCheckPath: /
+    disk:
+      name: data
+      mountPath: /app/data
+      sizeGB: 1
