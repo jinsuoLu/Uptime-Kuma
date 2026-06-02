@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
-      - uses: plbstl/first-contribution@4b2b042fffa26792504a18e49aa9543a87bec077 # v4.1.0
+      - uses: plbstl/first-contribution@5e84b16ee0cef8f8a87cb7a2cf247b187c228879 # v4.3.1
         with:
           pr-reactions: rocket
           pr-opened-msg: >
